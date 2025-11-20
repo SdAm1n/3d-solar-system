@@ -139,6 +139,7 @@
     <ClInclude Include="Sphere.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="copy_files.bat" />
     <None Include="copy_shaders.ps1" />
     <None Include="orbit.fs" />

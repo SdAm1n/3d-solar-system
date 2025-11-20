@@ -377,6 +377,9 @@ int main()
         // RENDER ORBIT LINES (if enabled)
         // ====================================================================
         if (showOrbits) {
+            // Make orbit lines thicker and more visible
+            glLineWidth(2.5f); // Increased from default 1.0 to 2.5 - BOLDER LINES
+            
             // Activate orbit shader
             orbitShader.use();  
             
@@ -384,7 +387,7 @@ int main()
             orbitShader.setMat4("projection", projection);
             orbitShader.setMat4("view", view);
             orbitShader.setMat4("model", glm::mat4(1.0f));  // Identity (no transformation)
-            orbitShader.setVec3("orbitColor", glm::vec3(0.3f, 0.3f, 0.5f));  // Blue-ish color
+            orbitShader.setVec3("orbitColor", glm::vec3(0.5f, 0.5f, 0.7f));  // Brighter blue-ish color
 
             // Draw each planet's orbit
             for (size_t i = 0; i < orbitVAOs.size(); i++) {
@@ -398,9 +401,12 @@ int main()
             // Translate orbit to Earth's current position
             moonOrbitModel = glm::translate(moonOrbitModel, earth->position);
             orbitShader.setMat4("model", moonOrbitModel);
-            orbitShader.setVec3("orbitColor", glm::vec3(0.5f, 0.5f, 0.6f));  // Lighter color
+            orbitShader.setVec3("orbitColor", glm::vec3(0.6f, 0.6f, 0.75f));  // Brighter lighter color
             glBindVertexArray(moonOrbitVAO);
             glDrawArrays(GL_LINE_LOOP, 0, moonSegments + 1);
+            
+            // Reset line width to default
+            glLineWidth(1.0f);
         }
 
         // ====================================================================

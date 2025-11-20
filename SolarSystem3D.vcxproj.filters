@@ -53,5 +53,6 @@
     <None Include="skybox.fs" />
     <None Include="README.md" />
     <None Include="PROJECT_SUMMARY.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

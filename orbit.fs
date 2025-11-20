@@ -5,5 +5,6 @@ uniform vec3 orbitColor;
 
 void main()
 {
-    FragColor = vec4(orbitColor, 0.4);
+    // Increased alpha from 0.4 to 0.7 for more visible orbit lines
+    FragColor = vec4(orbitColor, 0.7);
 }

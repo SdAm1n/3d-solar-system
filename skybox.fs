@@ -89,7 +89,7 @@ float stars(vec3 dir) {
     return brightness;
 }
 
-// Distant galaxy ring - MORE WHITE AND VISIBLE
+// Distant galaxy ring - provides ambient light
 vec3 distantGalaxyRing(vec3 dir) {
     // Create a ring in the distance (like viewing edge-on spiral galaxy)
     float distToPlane = abs(dir.y); // Distance from horizontal plane
@@ -102,8 +102,8 @@ vec3 distantGalaxyRing(vec3 dir) {
     float galaxyNoise = fbm(dir * 8.0 + vec3(time * 0.005, 0.0, 0.0));
     float galaxyDetail = fbm(dir * 20.0);
     
-    // Ring has brighter and dimmer areas - INCREASED BRIGHTNESS
-    float brightness = ringFalloff * (0.5 + galaxyNoise * 0.5); // Increased base brightness
+    // Ring has brighter and dimmer areas
+    float brightness = ringFalloff * (0.5 + galaxyNoise * 0.5);
     brightness *= 0.7 + galaxyDetail * 0.3;
     
     // Distance-based radial gradient (brighter in certain areas)
@@ -119,7 +119,7 @@ vec3 distantGalaxyRing(vec3 dir) {
     vec3 galaxyColor = mix(armColor, coreColor, galaxyNoise);
     galaxyColor = mix(galaxyColor, dustColor, galaxyDetail * 0.3);
     
-    return galaxyColor * brightness * 0.45; // Increased from 0.25 to 0.45 - MUCH MORE VISIBLE
+    return galaxyColor * brightness * 0.45; // Subtle glow
 }
 
 // Subtle distant nebula glow
