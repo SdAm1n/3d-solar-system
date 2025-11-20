@@ -6,15 +6,22 @@ param(
     [string]$ProjectDir
 )
 
-# All shader files in the project
+# All shader files in the shaders folder
 $shaderFiles = @(
-    "planet.vs", "planet.fs",
-    "orbit.vs", "orbit.fs",
-    "skybox.vs", "skybox.fs"
+    "shaders/planet.vs", "shaders/planet.fs",
+    "shaders/orbit.vs", "shaders/orbit.fs",
+    "shaders/skybox.vs", "shaders/skybox.fs"
 )
 
 Write-Host "Copying shader files to output directory..." -ForegroundColor Cyan
 Write-Host "Target: $TargetDir" -ForegroundColor Gray
+
+# Create shaders directory in target if it doesn't exist
+$targetShadersDir = Join-Path $TargetDir "shaders"
+if (-not (Test-Path $targetShadersDir)) {
+    New-Item -ItemType Directory -Path $targetShadersDir -Force | Out-Null
+    Write-Host "  Created shaders directory in output" -ForegroundColor Cyan
+}
 
 $successCount = 0
 $failCount = 0

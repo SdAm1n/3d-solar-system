@@ -7,11 +7,11 @@
 #include <vector>
 #include <cmath>
 #include <memory>
-#include "Camera.h"
-#include "Shader.h"
-#include "Sphere.h"
-#include "Planet.h"
-#include "Skybox.h"
+#include "include/Camera.h"
+#include "include/Shader.h"
+#include "include/Sphere.h"
+#include "include/Planet.h"
+#include "include/Skybox.h"
 
 // ============================================================================
 // WINDOW SETTINGS
@@ -138,9 +138,9 @@ int main()
     // Vertex shader: transforms vertices (positions)
     // Fragment shader: calculates pixel colors
     
-    Shader planetShader("planet.vs", "planet.fs");    // For rendering planets with procedural textures
-    Shader orbitShader("orbit.vs", "orbit.fs");       // For rendering orbit lines
-    Shader skyboxShader("skybox.vs", "skybox.fs");    // For rendering starfield background
+    Shader planetShader("shaders/planet.vs", "shaders/planet.fs");    // For rendering planets with procedural textures
+    Shader orbitShader("shaders/orbit.vs", "shaders/orbit.fs");       // For rendering orbit lines
+    Shader skyboxShader("shaders/skybox.vs", "shaders/skybox.fs");    // For rendering starfield background
 
     // ------------------------------------------------------------------------
     // STEP 7: Create Geometry

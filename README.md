@@ -97,17 +97,24 @@ See `PROJECT_SUMMARY.md` for detailed manual setup instructions.
 
 ```
 SolarSystem3D/
-main.cpp              # Main application and render loop
-Camera.h              # First-person camera system
-Shader.h              # Shader compilation and management
-Sphere.h              # Procedural sphere generation
-Planet.h              # Planet data and orbital mechanics
-Skybox.h              # Starfield skybox geometry
-planet.vs/fs          # Planet shaders (procedural textures)
-orbit.vs/fs           # Orbit line shaders
-skybox.vs/fs          # Space background shaders
-README.md             # This file
-PROJECT_SUMMARY.md    # Complete technical documentation
+??? include/              # Header files
+?   ??? Camera.h         # First-person camera system
+?   ??? Shader.h         # Shader compilation and management
+?   ??? Sphere.h         # Procedural sphere generation
+?   ??? Planet.h         # Planet data and orbital mechanics
+?   ??? Skybox.h         # Starfield skybox geometry
+??? shaders/             # GLSL shader files
+?   ??? planet.vs        # Planet vertex shader
+?   ??? planet.fs        # Planet fragment shader (procedural textures)
+?   ??? orbit.vs         # Orbit vertex shader
+?   ??? orbit.fs         # Orbit fragment shader
+?   ??? skybox.vs        # Skybox vertex shader
+?   ??? skybox.fs        # Skybox fragment shader (starfield)
+??? main.cpp             # Main application and render loop
+??? README.md            # This file
+??? PROJECT_SUMMARY.md   # Complete technical documentation
+??? .gitignore           # Git ignore file
+??? copy_shaders.ps1     # Build script to copy shaders
 ```
 
 ## Visual Highlights

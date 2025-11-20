@@ -22,6 +22,12 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# BUT keep include/ and shaders/ folders
+!include/
+!include/**
+!shaders/
+!shaders/**
+
 # Visual Studio cache/options
 .vs/
 *.cache
