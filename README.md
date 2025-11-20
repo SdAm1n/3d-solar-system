@@ -53,8 +53,8 @@ A stunning, interactive 3D solar system simulation with realistic procedural tex
 |-----|--------|
 | O | Toggle orbit lines |
 | P | Pause/Resume animation |
-| ? Arrow | Speed up time (max 10x) |
-| ? Arrow | Slow down time (min 0.1x) |
+|  Arrow | Speed up time (max 10x) |
+|  Arrow | Slow down time (min 0.1x) |
 | +/= | Increase camera speed |
 | - | Decrease camera speed |
 | ESC | Exit application |
@@ -97,24 +97,24 @@ See `PROJECT_SUMMARY.md` for detailed manual setup instructions.
 
 ```
 SolarSystem3D/
-??? include/              # Header files
-?   ??? Camera.h         # First-person camera system
-?   ??? Shader.h         # Shader compilation and management
-?   ??? Sphere.h         # Procedural sphere generation
-?   ??? Planet.h         # Planet data and orbital mechanics
-?   ??? Skybox.h         # Starfield skybox geometry
-??? shaders/             # GLSL shader files
-?   ??? planet.vs        # Planet vertex shader
-?   ??? planet.fs        # Planet fragment shader (procedural textures)
-?   ??? orbit.vs         # Orbit vertex shader
-?   ??? orbit.fs         # Orbit fragment shader
-?   ??? skybox.vs        # Skybox vertex shader
-?   ??? skybox.fs        # Skybox fragment shader (starfield)
-??? main.cpp             # Main application and render loop
-??? README.md            # This file
-??? PROJECT_SUMMARY.md   # Complete technical documentation
-??? .gitignore           # Git ignore file
-??? copy_shaders.ps1     # Build script to copy shaders
+ include/              # Header files
+    Camera.h         # First-person camera system
+    Shader.h         # Shader compilation and management
+    Sphere.h         # Procedural sphere generation
+    Planet.h         # Planet data and orbital mechanics
+    Skybox.h         # Starfield skybox geometry
+ shaders/             # GLSL shader files
+    planet.vs        # Planet vertex shader
+    planet.fs        # Planet fragment shader (procedural textures)
+    orbit.vs         # Orbit vertex shader
+    orbit.fs         # Orbit fragment shader
+    skybox.vs        # Skybox vertex shader
+    skybox.fs        # Skybox fragment shader (starfield)
+ main.cpp             # Main application and render loop
+ README.md            # This file
+ PROJECT_SUMMARY.md   # Complete technical documentation
+ .gitignore           # Git ignore file
+ copy_shaders.ps1     # Build script to copy shaders
 ```
 
 ## Visual Highlights
@@ -231,16 +231,16 @@ For complete technical details, see `PROJECT_SUMMARY.md` which includes:
 Based on: [OpenGL-SolarSystem](https://github.com/1kar/OpenGL-SolarSystem)
 
 **Our Enhancements:**
-- ? **Fiery volcanic sun** with realistic molten lava red-orange-yellow colors and dynamic surface effects
-- ? **Distant galaxy ring** providing ambient lighting and depth
-- ? Better procedural planet textures (Earth, Sun, all planets)
-- ? Moon orbiting Earth
-- ? Enhanced starfield with color variation and improved brightness
-- ? Subtle nebulae (purple, blue cosmic dust)
-- ? Milky Way band with detailed patterns
-- ? Better lighting (rim lighting, subsurface scattering)
-- ? More animation (sun lava flows, clouds, storms, twinkling, rotating galaxy)
-- ? Professional polish and documentation
+-  **Fiery volcanic sun** with realistic molten lava red-orange-yellow colors and dynamic surface effects
+-  **Distant galaxy ring** providing ambient lighting and depth
+-  Better procedural planet textures (Earth, Sun, all planets)
+-  Moon orbiting Earth
+-  Enhanced starfield with color variation and improved brightness
+-  Subtle nebulae (purple, blue cosmic dust)
+-  Milky Way band with detailed patterns
+-  Better lighting (rim lighting, subsurface scattering)
+-  More animation (sun lava flows, clouds, storms, twinkling, rotating galaxy)
+-  Professional polish and documentation
 
 ## Contributing
 
