@@ -7,7 +7,7 @@ A stunning, interactive 3D solar system simulation with realistic procedural tex
 ![License](https://img.shields.io/badge/License-Educational-green)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 
-![Screenshot of solar system](solar1.png)
+![Screenshot of solar system](solar.png)
 
 ## Features
 
