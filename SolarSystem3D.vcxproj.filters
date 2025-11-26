@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}</UniqueIdentifier>
+      <Extensions>vs;fs;glsl</Extensions>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</UniqueIdentifier>
+      <Extensions>bat;ps1;sh</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{B2C3D4E5-F6A7-8901-BCDE-F12345678901}</UniqueIdentifier>
+      <Extensions>md;txt</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -20,38 +32,67 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h">
+    <ClInclude Include="include\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="include\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sphere.h">
+    <ClInclude Include="include\Sphere.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Planet.h">
+    <ClInclude Include="include\Planet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Skybox.h">
+    <ClInclude Include="include\Skybox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="orbit.vs" />
-    <None Include="orbit.fs" />
-    <None Include="setup.ps1" />
+    <None Include="shaders\orbit.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\orbit.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\planet.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\planet.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="setup.ps1">
+      <Filter>Scripts</Filter>
+    </None>
     <None Include="setup.bat">
-      <Filter>Source Files</Filter>
+      <Filter>Scripts</Filter>
     </None>
-    <None Include="copy_shaders.ps1" />
-    <None Include="planet.vs" />
-    <None Include="planet.fs" />
+    <None Include="copy_shaders.ps1">
+      <Filter>Scripts</Filter>
+    </None>
     <None Include="copy_files.bat">
-      <Filter>Source Files</Filter>
+      <Filter>Scripts</Filter>
     </None>
-    <None Include="skybox.vs" />
-    <None Include="README.md" />
-    <None Include="PROJECT_SUMMARY.md" />
+    <None Include="README.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="PROJECT_SUMMARY.md">
+      <Filter>Documentation</Filter>
+    </None>
     <None Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SolarSystem3D.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

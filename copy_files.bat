@@ -1,20 +1,20 @@
 @echo off
-REM Post-build script to copy required shader files
+REM Post-build script to copy required shader files from shaders folder
 
-echo Copying shader files...
-copy /Y "planet.vs" "x64\Release\" >nul 2>&1
-copy /Y "planet.fs" "x64\Release\" >nul 2>&1
-copy /Y "orbit.vs" "x64\Release\" >nul 2>&1
-copy /Y "orbit.fs" "x64\Release\" >nul 2>&1
-copy /Y "skybox.vs" "x64\Release\" >nul 2>&1
-copy /Y "skybox.fs" "x64\Release\" >nul 2>&1
+echo Copying shader files from shaders folder...
+copy /Y "shaders\planet.vs" "x64\Release\" >nul 2>&1
+copy /Y "shaders\planet.fs" "x64\Release\" >nul 2>&1
+copy /Y "shaders\orbit.vs" "x64\Release\" >nul 2>&1
+copy /Y "shaders\orbit.fs" "x64\Release\" >nul 2>&1
+copy /Y "shaders\skybox.vs" "x64\Release\" >nul 2>&1
+copy /Y "shaders\skybox.fs" "x64\Release\" >nul 2>&1
 
-copy /Y "planet.vs" "x64\Debug\" >nul 2>&1
-copy /Y "planet.fs" "x64\Debug\" >nul 2>&1
-copy /Y "orbit.vs" "x64\Debug\" >nul 2>&1
-copy /Y "orbit.fs" "x64\Debug\" >nul 2>&1
-copy /Y "skybox.vs" "x64\Debug\" >nul 2>&1
-copy /Y "skybox.fs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\planet.vs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\planet.fs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\orbit.vs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\orbit.fs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\skybox.vs" "x64\Debug\" >nul 2>&1
+copy /Y "shaders\skybox.fs" "x64\Debug\" >nul 2>&1
 
 echo.
 echo All shader files copied successfully!

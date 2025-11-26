@@ -132,25 +132,31 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Planet.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="Skybox.h" />
-    <ClInclude Include="Sphere.h" />
+   <ClInclude Include="include\Camera.h" />
+   <ClInclude Include="include\Planet.h" />
+   <ClInclude Include="include\Shader.h" />
+   <ClInclude Include="include\Skybox.h" />
+   <ClInclude Include="include\Sphere.h" />
+   <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shaders\orbit.fs" />
+    <None Include="shaders\orbit.vs" />
+    <None Include="shaders\planet.fs" /> 
+    <None Include="shaders\planet.vs" />
+    <None Include="shaders\skybox.fs" />
+    <None Include="shaders\skybox.vs" />
+
     <None Include=".gitignore" />
     <None Include="copy_files.bat" />
     <None Include="copy_shaders.ps1" />
-    <None Include="orbit.fs" />
-    <None Include="orbit.vs" />
-    <None Include="planet.fs" />
-    <None Include="planet.vs" />
     <None Include="PROJECT_SUMMARY.md" />
     <None Include="README.md" />
     <None Include="setup.bat" />
     <None Include="setup.ps1" />
-    <None Include="skybox.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SolarSystem3D.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
